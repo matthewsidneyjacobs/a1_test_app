@@ -37,11 +37,11 @@ gulp.task('build-css', function() {
 });
 
 // you can pass in an array of multiple tasks
-gulp.task('build', ['build-js','build-css'], function() {
-  return gulp.src('index.html')
-    .pipe(cachebust.references())
-    .pipe(gulp.dest('dist'));
-})
+// gulp.task('build', ['build-js','build-css'], function() {
+//   return gulp.src('index.html')
+//     .pipe(cachebust.references())
+//     .pipe(gulp.dest('dist'));
+// })
 
 
 // gulp watch first array is something for gulp to watch, second array is tasks to run
