@@ -1,0 +1,38 @@
+{
+  "name": "a1_test_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-ui-bootstrap": "^2.3.0",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-cachebust": "0.0.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-print": "^2.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "material-design-icons": "^3.0.1",
+    "ngmap": "^1.17.8"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewsidneyjacobs/a1_noserver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matthewsidneyjacobs/a1_noserver/issues"
+  },
+  "homepage": "https://github.com/matthewsidneyjacobs/a1_noserver#readme",
+  "description": ""
+}

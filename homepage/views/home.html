@@ -1,0 +1,53 @@
+<div class="home_container">
+
+    <!-- <slick settings="slickConfig" ng-if="numberLoaded">
+      <div ng-repeat="slide in slides"><img ng-src="{{slide}}"/>
+      </div>
+    </slick> -->
+
+
+
+
+  <div class="home_carousel">
+    <div ng-controller="homeCtrl">
+      <div style="height: 250px">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+          <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br/>
+
+  <div class="home_main">
+
+    <div class="btn-group" uib-dropdown keyboard-nav>
+        <button id="simple-btn-keyboard-nav" type="button"  class="btn btn-primary" uib-dropdown-toggle>
+            Select Your Next Stop <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav"  ng-class="{active: isSelected(location.id)}">
+            <li  ng-repeat="location in locations"  ng-click="selectedCenter(location.lat); selectedLoc(location.id); infoSelect(location.image); descSelect(location.desc)" role="menuitem"><a ui-sref="map({param:location.id})" >{{location.id}}</a></li>
+        </ul>
+      </div>
+
+<!-- carousel from angularuibootstrap - need to give it my own pictures -->
+
+    <div class="container">
+      <div class="jumbotron">
+        <p>Welcome to the San Diego Zoo! It's a big zoo, use me to help you find your way around. Keep in mind this is just a guide, for more specific directions feel free to ask an employee. Pick an option above and enjoy your visit!</p>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="bottom-menu-mobile">
+      <a ui-sref='map'><i class="material-icons md-48">chevron_right</i></a>
+  </div>
+
+</div>

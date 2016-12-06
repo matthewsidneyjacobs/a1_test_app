@@ -1,0 +1,80 @@
+<div class="map_container">
+<!-- <h1>Hello from map</h1>
+<div ng-repeat="location in locations"></div>
+<p> You've selected:  {{place}}</p> -->
+
+  <div class="map_top_selectors">
+
+
+
+    <!-- <div class="map_buttons" id="left_map_btn">
+      <div class="btn-group"> -->
+          <!-- <button id="simple-btn" type="button"  class="btn btn-primary">
+              toggle start
+          </button> -->
+
+          <!-- <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">toggle start </button> -->
+          <!-- <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav"  ng-class="{active: isSelected(location.id)}">
+              <li  ng-repeat="location in locations"  ng-click="setMarker(location.lat)" role="menuitem"><a>{{location.id}}</a></li>
+          </ul> -->
+        <!-- </div>
+    </div> -->
+
+
+
+    <div class="map_buttons" id="right_map_btn">
+      <div class="btn-group" uib-dropdown keyboard-nav dropdown-append-to="appendToEl">
+          <button id="simple-btn-keyboard-nav" type="button"  class="btn btn-primary" uib-dropdown-toggle>
+              Change Destination <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav"  ng-class="{active: isSelected(location.id)}">
+              <li  ng-repeat="location in locations"  ng-click="selectedCenter(location.lat)" role="menuitem"><a ui-sref="map({param:location.id})" >{{location.id}}</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="map_area">
+
+    <div  map-lazy-load="https://maps.google.com/maps/api/js"
+    map-lazy-load-params="{{googleMapsUrl}}">
+    <ng-map default-style="false" style="height:600px" center="{{mapDestination}}" zoom="18">
+      <marker position="{{mapDestination}}"></marker>
+      <directions
+          draggable="true"
+          travel-mode="WALKING"
+          origin="{{currentLocation}}"
+          destination="{{mapDestination}}">
+      </directions>
+
+
+      <!-- <marker position="{{startMarker}}"></marker> -->
+      <!-- <marker position="{{endMarker}}"></marker> -->
+    </ng-map>
+  </div>
+
+  </div>
+
+
+  <div class="map_footer">
+
+    <div class="map_bottom_nav">
+        <a ui-sref='home'><i class="material-icons md-48">chevron_left</i></a>
+    </div>
+    <div class="map_bottom_nav">
+        <a ui-sref='animal_info'><i class="material-icons md-48">chevron_right</i></a>
+    </div>
+
+  </div>
+
+
+
+<!-- maps api key
+AIzaSyAuJ2Nb_9pNv5FjSX1H2v0oJHD9y0_FFR0
+map street view api key
+AIzaSyB00yLgOPTJrQqDP62f7p0JjMF7trTT5TQ -->
+
+
+
+</div>
