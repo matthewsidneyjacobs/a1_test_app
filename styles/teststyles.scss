@@ -162,14 +162,14 @@ ng-map {
 
 .info_main {
   position: relative;
-  bottom:-100px;
+  bottom:-40px;
   margin:auto;
   @extend .sass_flex;
   justify-content: space-between;
   text-align: center;
   width:100vw;
   height: 100%;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 
